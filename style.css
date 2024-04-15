@@ -1,0 +1,555 @@
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #4862f1;
+    overflow-x: hidden;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #9DD7E5;
+    padding-top: 1.5rem;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem 0rem 3em;
+}
+header img{
+    margin-bottom: -0.3em;
+}
+
+
+/* Seção de Destaque */
+#background-home {
+    width: 100%;
+    height: 86vh;
+    background-image: url(./img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#background-home h1 {
+    font-size: 60px;
+    margin-bottom: 1%;
+}
+
+#background-home p {
+    font-size: 30px;
+}
+
+/* Seção de Temporada de Animes */
+#temporada {
+    background-color: #9DD7E5;
+    padding-bottom: 2rem;
+    text-align: center;
+    width: 100%;
+}
+#iframe{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+
+#temporada h2 {
+    font-size: 2rem;
+}
+.menu{
+    display: none;
+}
+
+#temporada img {
+    width: 17.5%;
+    height: auto;
+    margin-left: -.4%;
+    cursor: pointer;
+}
+
+#teste {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    background-color: #9dd7e5da;
+    border-radius: 3px;
+    top: 75px;
+    opacity: 1;
+    right: 0px;
+    transition: 0.25s ease-in-out;
+    box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.473);
+}
+    #teste ul{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+    .first{
+        margin-top: 4px;
+    }
+    li{
+        margin-top: 20px;
+    }
+   #teste > ul >li > a{
+    font-size: large;
+    font-variant: small-caps;
+    text-transform: capitalize;
+   }
+   #teste > ul >li:hover{
+    font-size: large;
+    font-variant: small-caps;
+    text-transform: capitalize;
+    transform: translate(-10px,0px);
+    transition: .7s;
+   }
+   #teste > ul >li{
+    font-size: large;
+    font-variant: small-caps;
+    text-transform: capitalize;
+    transition: .7s;
+   }
+   iframe{
+    display: none;
+    width: 100vw;
+    height: 60vh;
+    cursor: pointer;
+}
+#nav-desktop{
+    display: flex;
+    gap: 30px
+}
+
+
+
+/* Seção de Melhores Animes */
+#melhores-animes {
+    background-color: #FBDB15;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+#melhores-animes img #temporada img #seta-direita #seta-esquerda{
+    display: flex;
+}
+
+#melhores-animes h2 {
+    font-size: 2rem;
+}
+
+#melhores-animes img {
+    width: 17.5%;
+    height: auto;
+    margin-left: -.4%;
+    cursor: pointer;
+}
+
+a h2, a h2{
+    padding: 1rem;
+    font-size: 2rem;
+    text-decoration: underline;
+}
+footer{
+    background-color: #505050;
+    color: white;
+}
+footer section{
+    display: inline-flex;
+    gap: 2%;
+    padding: 2%;
+}
+#informacao{
+    margin-left: 5%;
+    text-align: justify;
+    width: 42%;
+    font-size: 20px;
+}
+#redes-sociais{
+    flex-direction: column;
+    gap: 15px;
+    margin-left: 7%;
+    font-size: 21px;
+    width: 45%;
+}
+#instagram{
+    margin-top: 10px;
+    gap: 15px;
+    display: flex;
+    font-size: 25px;
+}
+
+/* TELAS DE MELHORES ANIMES E ANIMES DA TEMPORADA */
+
+    #background{
+        width: 80%;
+        background-color: white;
+        margin-left: 10%;
+        padding-bottom: 50px;
+    }
+    #background h1{
+        padding: 15px;
+        margin-bottom: 50px;
+        font-size: 28px;
+        text-align: center;
+    }
+    .anime{
+        display: flex;
+        gap: 5%;
+        margin-bottom: 30px;
+    }
+    .anime img{
+        width: 192px;
+        height: 272px;
+        margin-left: 10%;
+    }
+    .anime p{
+        padding: 5px;
+    }
+   .informacao-anime{
+    width: 100%;
+    margin-right: 10%;
+   }
+    .informacao-anime h2{
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .sinopse{
+        margin-left: 10%;
+        margin-right: 10%;
+        text-align: justify;
+        margin-bottom: 50px;
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+    }
+
+
+/* RESPONSIVIDADE TELA PRINCIPAL, HEADER E CABEÇARIO*/
+@media screen and (max-width: 960px) {
+    
+    #nav-desktop {
+        display: none;
+    }
+    .menu{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 920px){
+    footer section{
+        flex-direction: column;
+        align-items: center;
+    }
+    #informacao{
+        width: 90%;
+    }
+    #redes-sociais{
+        width: 90%;
+        gap: 10px;
+    }
+    #temporada img{
+        width: 21%;
+    }
+    #melhores-animes img{
+        width: 21%; 
+    }
+}
+@media screen and (max-width: 660px){
+    #background{
+        width: 90%;
+        margin-left: 5%;
+    }
+    .sinopse{
+        width: 80%;
+        margin-left: 10%;
+    }
+    footer p{
+        font-size: 15px;
+    }
+    footer h3{
+        font-size: 22px;
+    }
+    #redes-sociais p{
+        font-size: 21px;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    #background-home h1{
+        font-size: 50px;
+    }
+    #background-home p{
+        font-size: 25px;
+    }
+}
+@media screen and (max-width: 590px){
+    #background{
+        width: 100%;
+        margin-left: 0px;
+    }
+    .anime{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .anime img{
+        margin-left: 0px;
+        width: 270px;
+        height: 345px;
+    }
+    .anime h2{
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+    .informacao-anime{
+        margin-left: 0px;
+        padding-top: 30px;
+        margin-right: 0px;
+    }
+    .informacao-anime p{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .sinopse{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+    
+
+}
+@media screen and (max-width: 535px) {
+    #background-home h1{
+        font-size: 45px;
+    }
+    #background-home p{
+        font-size: 20px;
+    }
+    #temporada h2{
+        font-size: 1.7rem;
+    }
+    #melhores-animes h2{
+        font-size: 1.7rem;
+    }
+}
+@media  screen and (max-width: 500px) {
+    #temporada img{
+        width: 20%;
+    }
+    #melhores-animes img{
+        width: 20%; 
+    }
+}
+@media screen and (max-width: 430px) {
+    #background-home h1{
+        font-size: 36px;
+    }
+    #background-home p{
+        font-size: 18px;
+    }
+    #temporada h2{
+        font-size: 1.45rem;
+    }
+    #melhores-animes h2{
+        font-size: 1.45rem;
+    }
+    header img{
+        margin-left: -6%;
+        width: 280px;
+    }
+    #redes-sociais{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 385px){
+    footer h3{
+        font-size: 20px;
+    }
+}
+
+
+.carousel-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.melhores_animes {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    
+}
+
+.melhores{
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+.carousel img {
+    width: 25%; /* 4 images per row */
+    height: auto;
+}
+
+.melhores img {
+    width: 25%; /* 4 images per row */
+    height: auto;
+}
+
+#prevBtn,
+#nextBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    padding: 10px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+#prevBtn {
+    left: 0;
+    
+}
+
+#nextBtn {
+    right: 0;
+}
+
+#prevBtn2,
+#nextBtn2 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    padding: 10px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+#prevBtn2 {
+    left: 0;
+    
+}
+
+#nextBtn2 {
+    right: 0;
+}
+
+h2 {
+    text-align: center;
+}
+
+/* sla*/
+#temporada {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    
+}
+
+#temporada {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+#temporada img {
+    width: 25%; /* 4 images per row */
+    height: auto;
+}
+
+#prevBtn,
+#nextBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    padding: 10px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+#prevBtn {
+    left: 0;
+    
+}
+
+#nextBtn {
+    right: 0;
+}
+
+h2 {
+    text-align: center;
+}
+
+.bochi{
+    display: none;
+}
+
+
+/* ... Seu CSS existente ... */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.modal-content {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+.iframe-style iframe{
+    width: 50%;
+    margin: auto;
+    
+}
